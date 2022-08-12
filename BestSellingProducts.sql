@@ -1,4 +1,4 @@
-SELECT TOP 10
+SELECT TOP 1
 	ProductSales.ProductKey, 
 	EnglishProductName AS ProductName,
 	TotalProductsPurchased
