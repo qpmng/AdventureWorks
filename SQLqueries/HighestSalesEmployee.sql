@@ -1,4 +1,4 @@
-SELECT TOP 10
+SELECT TOP 1
 	SalesAndID.EmployeeKey, 
 	CASE 
 		WHEN MiddleName IS NULL THEN "FirstName"+' '+ "LastName"
