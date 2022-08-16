@@ -21,4 +21,4 @@ HAVING
 We use a similar SQL query to check for duplicate values in the online sales and customer tables. Based on the result, there are no duplicate orders and no duplicate customer information. Thus, we can move on to processing the data.
 
 ## Process
-The process phase is necessary to transform the data into meaningful patterns for analysis
+The process phase allows us to transform the data into meaningful patterns for analysis. The following SQL query returns the top 10 best selling products 
