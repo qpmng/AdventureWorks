@@ -4,8 +4,7 @@ The point of this analysis is to utilize the online and reseller sales data to d
 
 ## Prepare
 The prepare phase helps ensure data credibility and data integrity. Checking if the raw data is free of duplicate values allows the data to be unbiased and credible. The following SQL query checks for duplicate values in the sales table:
-```
-SELECT 
+```SELECT 
 	SalesOrderNumber,
 	ProductKey,
 	COUNT(*)
