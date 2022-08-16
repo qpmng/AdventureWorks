@@ -1,7 +1,9 @@
-# AdventureWorks
-A thorough analysis of the AdventureWorks database from Microsoft
+# AdventureWorks Database Analysis
+## Introduction
+The point of this analysis is to utilize the online and reseller sales data to determine which products or product categories keep customers coming back to AdventureWorks.
 
-AdventureWorks is an imaginary company founded by Microsoft. It is one of the most popular sample databases for testing, examining, and analyzing.
+## Prepare
+The prepare phase helps ensure data credibility and data integrity. Checking if the raw data is free of duplicate values allows the data to be unbiased and credible. The following SQL query checks for duplicate values in the sales table:
 ```
 SELECT 
 	SalesOrderNumber,
