@@ -17,3 +17,4 @@ GROUP BY
 HAVING
 	COUNT(*)>1
 ```
+We use a similar SQL query to check for duplicate values in the online sales and customer tables. Based on the result, there are no duplicate orders and no duplicate customer information. Thus, we can move on to processing the data.
