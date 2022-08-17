@@ -133,4 +133,36 @@ FROM
 			EnglishProductCategoryName
 	) AS Onl ON Res.Category=Onl.Category
 ```
-We want to further examine each category and find out the exact 
+We want to further examine each category and find out the exact quantity under each subcategory. Suppose we want to acquire a table with quantity count for each subcategory under the category Bikes that are purchased online. Similar to the previous query, the following one generates the quantity from the sales table and connects to the product tables to return the names for Bikes' subcategories.
+```sql
+SELECT 
+	EnglishProductCategoryName AS Category,
+	EnglishProductSubcategoryName AS Subcategory,
+	COUNT(EnglishProductSubcategoryName) AS QuantitiesPurchasedOnline
+FROM 
+	(
+		SELECT
+			ProductKey,
+			COUNT(ProductKey) AS QuantityPurchased
+		FROM 
+			AdventureWorksDW2019.dbo.FactInternetSales
+		GROUP BY
+			ProductKey
+	) AS Onl
+	LEFT JOIN
+		AdventureWorksDW2019.dbo.DimProduct
+		ON Onl.ProductKey=AdventureWorksDW2019.dbo.DimProduct.ProductKey
+	LEFT JOIN
+		AdventureWorksDW2019.dbo.DimProductSubcategory
+		ON AdventureWorksDW2019.dbo.DimProduct.ProductSubcategoryKey
+		=AdventureWorksDW2019.dbo.DimProductSubcategory.ProductSubcategoryKey
+	LEFT JOIN
+		AdventureWorksDW2019.dbo.DimProductCategory
+		ON AdventureWorksDW2019.dbo.DimProductSubcategory.ProductCategoryKey
+		=AdventureWorksDW2019.dbo.DimProductCategory.ProductCategoryKey
+WHERE 
+	EnglishProductCategoryName='Bikes'
+GROUP BY
+	EnglishProductCategoryName, 
+	EnglishProductSubcategoryName
+```
