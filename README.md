@@ -67,7 +67,8 @@ ORDER BY
 	TotalProductsPurchased DESC
 ;
 ```
-Each product has a category, and this SQL query reports the number of products purchased in each type.
+The query first generates a table with product keys and the corresponding quantity. Then, it returns the products' names through a JOIN clause with the product description table.<br/>\
+Each product has a category, and this SQL query reports the number of products purchased under each type.
 ```sql
 SELECT
 	COALESCE(Res.Category, Onl.Category) AS Category,
@@ -132,4 +133,4 @@ FROM
 			EnglishProductCategoryName
 	) AS Onl ON Res.Category=Onl.Category
 ```
-
+We want to further examine each category and find out the exact 
