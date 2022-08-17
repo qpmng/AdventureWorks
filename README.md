@@ -1,6 +1,6 @@
 # AdventureWorks Database Analysis
 ## Introduction
-The point of this analysis is to utilize the online and reseller sales data to determine which products or product categories keep customers coming back to AdventureWorks. The company also wants to identify which product generates the highest revenue per one product quantity.<br/>
+The point of this analysis is to utilize the online and reseller sales data to determine which products or product categories keep customers coming back to AdventureWorks. The company also wants to identify which product generates the highest revenue per one product quantity.<br/>\
 Most data manipulation and transformation process will be done with SQL, while data visualization will be created with R and Tableau
 
 ## Prepare
