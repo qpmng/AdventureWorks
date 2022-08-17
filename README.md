@@ -67,7 +67,7 @@ ORDER BY
 	TotalProductsPurchased DESC
 ;
 ```
-Each product has a category, and thís SQL query reports the number of products purchased in each type.
+Each product has a category, and this SQL query reports the number of products purchased in each type.
 ```sql
 SELECT
 	COALESCE(Res.Category, Onl.Category) AS Category,
