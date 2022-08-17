@@ -132,6 +132,7 @@ FROM
 		GROUP BY
 			EnglishProductCategoryName
 	) AS Onl ON Res.Category=Onl.Category
+;
 ```
 We want to further examine each category and find out the exact quantity under each subcategory. Suppose we want to acquire a table with quantity count for each subcategory under the category Bikes that are purchased online. Similar to the previous query, the following one generates the quantity from the sales table and connects to the product tables to return the names for Bikes' subcategories.
 ```sql
@@ -165,4 +166,5 @@ WHERE
 GROUP BY
 	EnglishProductCategoryName, 
 	EnglishProductSubcategoryName
+;
 ```
