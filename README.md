@@ -24,7 +24,7 @@ We use a similar SQL query to check for duplicate values in the online sales and
 
 ## Process
 The process phase allows us to transform the data into meaningful patterns for analysis. The following SQL query returns the top 5 best-selling products of all time. This query also includes subqueries to find the top 5 best-selling products in each division.
-```
+```sql
 SELECT TOP 5
 	EnglishProductName AS ProductName,
 	TotalProductsPurchased
