@@ -8,7 +8,9 @@ Most data manipulation and transformation process will be done with SQL, while d
 
 The AdventureWorks database can be found [here](https://docs.microsoft.com/en-us/sql/samples/adventureworks-install-configure?view=sql-server-ver16&tabs=ssms). <br />
 
-The prepare phase helps ensure data credibility and data integrity. Checking if the raw data is free of duplicate values allows the data to be unbiased and credible. The following SQL query checks for duplicate values in the reseller sales table - if a sales order number contains more than one product key, it is considered a duplicate order.
+The prepare phase helps ensure data credibility and data integrity. 
+### Duplicate and null values
+Checking if the raw data is free of duplicate values allows the data to be unbiased and credible. The following SQL query checks for duplicate values in the reseller sales table - if a sales order number contains more than one product key, it is considered a duplicate order.
 ```sql
 SELECT 
 	SalesOrderNumber,
@@ -23,8 +25,10 @@ HAVING
 	COUNT(*)>1
 ;
 ```
-We use a similar SQL query to check for duplicate values in the online sales and customer tables. Fortunately, based on the result, there are no duplicate orders and no duplicate customer information. <br />
-Moreover, some products do not have a subcategory key, so it is important to take into consideration the orders containing such products. From the table product, the first 209 products labeling 1-209 are not subcategorized. Thus, the following query returns orders with non-subcategorized products.
+We use a similar SQL query to check for duplicate values in the online sales and customer tables. Fortunately, based on the result, there are no duplicate orders and no duplicate customer information. 
+
+### Non-subcategorized products
+Some products do not have a subcategory key, so it is important to take into consideration the orders containing such products. From the table product, the first 209 products labeling 1-209 are not subcategorized. Thus, the following query returns orders with non-subcategorized products.
 ```sql
 SELECT *
 FROM 
