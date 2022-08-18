@@ -86,7 +86,7 @@ ORDER BY
 ;
 ```
 The query first generates a table with product keys and the corresponding quantity. Then, it returns the products' names through a JOIN clause with the product description table.<br/>\
-### Best-selling category
+### Best-selling categories
 Each product has a category, and this SQL query reports the number of products purchased under each type.
 ```sql
 SELECT
