@@ -34,11 +34,14 @@ FROM
 	ON Res.ProductKey=Onl.ProductKey
 WHERE
 	COALESCE(Res.ProductKey,Onl.ProductKey)<210
+;
 ```
 Results show that there are no such orders. Thus, we can move on to processing the data.
 
 ## Process
-The process phase allows us to transform the data into meaningful patterns for analysis. The following SQL query returns the top 5 best-selling products of all time. This query also includes subqueries to find the top 5 best-selling products in each division.
+The process phase allows us to transform the data into meaningful patterns for analysis. 
+### Best-selling products
+The following SQL query returns the top 5 best-selling products of all time. This query also includes subqueries to find the top 5 best-selling products in each division.
 ```sql
 SELECT TOP 5
 	EnglishProductName AS ProductName,
@@ -83,6 +86,7 @@ ORDER BY
 ;
 ```
 The query first generates a table with product keys and the corresponding quantity. Then, it returns the products' names through a JOIN clause with the product description table.<br/>\
+### Best-selling category
 Each product has a category, and this SQL query reports the number of products purchased under each type.
 ```sql
 SELECT
@@ -149,6 +153,7 @@ FROM
 	) AS Onl ON Res.Category=Onl.Category
 ;
 ```
+### Best-selling subcategories
 We want to further examine each category and find out the exact quantity under each subcategory. Suppose we want to acquire a table with quantity count for each subcategory under the category Bikes that are purchased online. Similar to the previous query, the following one generates the quantity from the sales table and connects to the product tables to return the names for Bikes' subcategories.
 ```sql
 SELECT 
