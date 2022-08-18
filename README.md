@@ -9,7 +9,7 @@ The prepare phase helps ensure data credibility and data integrity.
 The AdventureWorks database can be found [here](https://docs.microsoft.com/en-us/sql/samples/adventureworks-install-configure?view=sql-server-ver16&tabs=ssms). <br />
  
 ### Duplicate and null values
-Checking if the raw data is free of duplicate values allows the data to be unbiased and credible. The following SQL query checks for duplicate values in the reseller sales table - if a sales order number contains more than one product key, it is considered a duplicate order.
+Checking if the raw data is free of duplicate values allows the data to be unbiased and credible. The following SQL query checks for duplicate values in the reseller sales table - if a sales order number contains more than one product key, it is considered a duplicate.
 ```sql
 SELECT 
 	SalesOrderNumber,
