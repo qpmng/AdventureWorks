@@ -59,4 +59,4 @@ FROM
 				=AdventureWorksDW2019.dbo.DimProductCategory.ProductCategoryKey
 		GROUP BY
 			EnglishProductCategoryName
-	) AS Onl ON Res.Category=Onl.Category
+	) AS Onl ON Res.Category=Onl.Category;
