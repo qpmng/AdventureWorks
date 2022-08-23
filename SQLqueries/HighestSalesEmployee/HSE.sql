@@ -18,4 +18,4 @@ FROM
 	LEFT JOIN AdventureWorksDW2019.dbo.DimEmployee
 	ON SalesAndID.EmployeeKey=AdventureWorksDW2019.dbo.DimEmployee.EmployeeKey
 ORDER BY
-	TotalSales DESC
+	TotalSales DESC;
