@@ -1,4 +1,4 @@
-SELECT
+SELECT TOP 5
 	ProductSales.ProductKey, 
 	EnglishProductName AS ProductName,
 	TotalProductsPurchased
@@ -38,5 +38,4 @@ FROM
 	LEFT JOIN AdventureWorksDW2019.dbo.DimProduct
 	ON ProductSales.ProductKey=AdventureWorksDW2019.dbo.DimProduct.ProductKey
 ORDER BY
-	TotalProductsPurchased DESC
-;
+	TotalProductsPurchased DESC;
