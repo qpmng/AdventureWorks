@@ -6,4 +6,4 @@ FROM
 GROUP BY
 	ProductKey
 ORDER BY
-	ProductKey
+	ProductKey;
