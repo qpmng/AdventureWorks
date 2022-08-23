@@ -9,11 +9,11 @@ The AdventureWorks database can be found [here](https://docs.microsoft.com/en-us
 
 ## Datasets used
 dbo.DimCustomer <br/>
-dbo.DimEmployee
-dbo.DimProduct
-dbo.DimProductCategory
-dbo.DimProductSubcategory
-dbo.FactInternetSales
-dbo.FactResellerSales
-dbo.FactSalesQuota
-
+dbo.DimEmployee <br/>
+dbo.DimProduct <br/>
+dbo.DimProductCategory <br/>
+dbo.DimProductSubcategory <br/>
+dbo.FactInternetSales <br/>
+dbo.FactResellerSales <br/>
+dbo.FactSalesQuota <br/>
+ 
