@@ -6,4 +6,4 @@ FROM
 GROUP BY
 	CustomerKey
 HAVING
-	COUNT(CustomerKey)>1
+	COUNT(CustomerKey)>1;
