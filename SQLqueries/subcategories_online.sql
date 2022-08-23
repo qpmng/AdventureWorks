@@ -27,4 +27,4 @@ WHERE
 	EnglishProductCategoryName='Bikes'
 GROUP BY
 	EnglishProductCategoryName, 
-	EnglishProductSubcategoryName
+	EnglishProductSubcategoryName;
