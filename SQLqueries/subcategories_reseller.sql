@@ -26,4 +26,4 @@ FROM
 GROUP BY
 	EnglishProductCategoryName, EnglishProductSubcategoryName
 ORDER BY
-	NoCategoriesPurchasedReseller DESC
+	NoCategoriesPurchasedReseller DESC;
